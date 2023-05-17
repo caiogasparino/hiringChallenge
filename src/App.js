@@ -2,16 +2,16 @@ import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  const [isLightTheme, setIsLightTheme] = useState(true);
+  const [isLight, setIsLight] = useState(true);
 
   const toggleTheme = () => {
-    setIsLightTheme(!isLightTheme);
+    setIsLight(!isLight);
   };
 
-  const titleCurrentTheme = isLightTheme ? "light" : "dark";
+  const titleCurrentTheme = isLight ? "light" : "dark";
 
   return (
-    <div className={`App ${isLightTheme ? "light-theme" : "dark-theme"}`}>
+    <div className={`App ${isLight ? "light-theme" : "dark-theme"}`}>
       <h1>Current theme: {titleCurrentTheme}</h1>
       <p>
         Light themes have lighter backgrounds and darker font colors. Meanwhile,
